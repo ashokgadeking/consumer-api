@@ -1,0 +1,176 @@
+I, [2021-01-18T16:02:37.179264 #4400]  INFO -- : Registered expected interaction GET /products
+D, [2021-01-18T16:02:37.179987 #4400] DEBUG -- : {
+  "description": "a request to retrieve product list",
+  "providerState": "it has one product",
+  "request": {
+    "method": "GET",
+    "path": "/products"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "name": "Foo"
+      }
+    ]
+  }
+}
+I, [2021-01-18T16:02:37.191313 #4400]  INFO -- : Received request GET /products
+D, [2021-01-18T16:02:37.191397 #4400] DEBUG -- : {
+  "path": "/products",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-01-18T16:02:37.191493 #4400]  INFO -- : Found matching response for GET /products
+D, [2021-01-18T16:02:37.191535 #4400] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": [
+    {
+      "name": "Foo"
+    }
+  ]
+}
+I, [2021-01-18T16:02:37.197561 #4400]  INFO -- : Verifying - interactions matched for example ""
+I, [2021-01-18T16:02:37.200020 #4400]  INFO -- : Cleared interactions before example ""
+I, [2021-01-18T16:02:37.203979 #4400]  INFO -- : Registered expected interaction GET /products?min-price=2&max-price=5
+D, [2021-01-18T16:02:37.204079 #4400] DEBUG -- : {
+  "description": "a request to retrieve product list filtered by price",
+  "providerState": "it has multiple products with different prices",
+  "request": {
+    "method": "GET",
+    "path": "/products",
+    "query": {
+      "min-price": [
+        "2"
+      ],
+      "max-price": [
+        "5"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "name": "Foo",
+        "img": "http://foo-url.com",
+        "price": 2
+      },
+      "min": 1
+    }
+  }
+}
+I, [2021-01-18T16:02:37.207803 #4400]  INFO -- : Received request GET /products?min-price=2&max-price=5
+D, [2021-01-18T16:02:37.207858 #4400] DEBUG -- : {
+  "path": "/products",
+  "query": "min-price=2&max-price=5",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Accept": "application/json",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-01-18T16:02:37.208024 #4400]  INFO -- : Found matching response for GET /products?min-price=2&max-price=5
+D, [2021-01-18T16:02:37.208072 #4400] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "name": "Foo",
+      "img": "http://foo-url.com",
+      "price": 2
+    },
+    "min": 1
+  }
+}
+I, [2021-01-18T16:02:37.214564 #4400]  INFO -- : Verifying - interactions matched for example ""
+I, [2021-01-18T16:02:37.217946 #4400]  INFO -- : Cleared interactions before example ""
+I, [2021-01-18T16:02:37.221568 #4400]  INFO -- : Registered expected interaction POST /products
+D, [2021-01-18T16:02:37.221706 #4400] DEBUG -- : {
+  "description": "a request to create a new product",
+  "providerState": "it has one product",
+  "request": {
+    "method": "POST",
+    "path": "/products",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "name": "Bar",
+      "img": "https://webshop.com/img/cheap-shoe.png",
+      "price": 2,
+      "stock": 3
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+    },
+    "body": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "name": "Bar",
+      "img": "https://webshop.com/img/cheap-shoe.png",
+      "price": 2,
+      "stock": 3
+    }
+  }
+}
+I, [2021-01-18T16:02:37.227391 #4400]  INFO -- : Received request POST /products
+D, [2021-01-18T16:02:37.227475 #4400] DEBUG -- : {
+  "path": "/products",
+  "query": "",
+  "method": "post",
+  "body": {
+    "name": "Bar",
+    "img": "https://webshop.com/img/cheap-shoe.png",
+    "price": 2,
+    "stock": 3
+  },
+  "headers": {
+    "Content-Length": "81",
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Accept": "application/json",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-01-18T16:02:37.228225 #4400]  INFO -- : Found matching response for POST /products
+D, [2021-01-18T16:02:37.228290 #4400] DEBUG -- : {
+  "status": 201,
+  "headers": {
+  },
+  "body": {
+    "id": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 1
+    },
+    "name": "Bar",
+    "img": "https://webshop.com/img/cheap-shoe.png",
+    "price": 2,
+    "stock": 3
+  }
+}
+I, [2021-01-18T16:02:37.231912 #4400]  INFO -- : Verifying - interactions matched for example ""
+I, [2021-01-18T16:02:37.234275 #4400]  INFO -- : Cleared interactions before example ""
+I, [2021-01-18T16:02:37.238306 #4400]  INFO -- : Writing pact with details {:pactfile_write_mode=>"overwrite", :consumer=>{:name=>"Client"}, :provider=>{:name=>"ProductService"}}
+I, [2021-01-18T16:02:37.238359 #4400]  INFO -- : Writing pact for ProductService to /Users/ashoktejagadepalli/work/consumer-api/pacts/client-productservice.json
