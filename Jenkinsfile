@@ -9,7 +9,7 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('Install') {
+    stage('Test') {
       steps {
         sh 'npm run test-consumer'
       }
