@@ -3,7 +3,7 @@ pipeline {
    stages {
         stage('Checkout') {
             steps {
-                sh "npm version"
+                sh "docker version"
             }
         }     
     }
