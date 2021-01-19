@@ -1,10 +1,13 @@
 pipeline {
-   agent any
-   stages {
-        stage('Checkout') {
-            steps {
-                sh "docker version"
-            }
-        }     
+  agent any
+ 
+  tools {nodejs "node"}
+ 
+  stages {
+    stage('Example') {
+      steps {
+        sh 'npm config ls'
+      }
     }
+  }
 }
