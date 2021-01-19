@@ -1,12 +1,12 @@
 pipeline {
-   agent any
-   stages {
-        stage('Checkout') {
+    agent {
+        docker { image 'node:14-alpine' }
+    }
+    stages {
+        stage('Test') {
             steps {
-                docker.image('node:latest').inside {
-				  sh 'la -la'
-				}
+                sh 'node --version'
             }
-        }     
+        }
     }
 }
