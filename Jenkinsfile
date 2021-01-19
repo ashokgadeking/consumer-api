@@ -14,5 +14,10 @@ pipeline {
         sh 'npm run test-consumer'
       }
     }
+    stage('Publish Pact') {
+      steps {
+        sh 'npm run publish-pacts'
+      }
+    }
   }
 }
