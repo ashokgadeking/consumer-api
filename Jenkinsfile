@@ -24,9 +24,9 @@ pipeline {
       }
     }
     
-    stage('Pact Broker') {
+    stage('Can I deploy?') {
       steps {
-        sh './pact-binaries/bin/pact-broker --help'
+        sh 'npm run can-i-deploy'
       }
     }
 
