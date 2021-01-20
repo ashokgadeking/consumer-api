@@ -26,9 +26,9 @@ pipeline {
     
     stage('Pact Broker') {
       steps {
-        sh './pact-broker --help'
+        sh './pact-binaries/bin/pact-broker --help'
       }
     }
-    
+
   }
 }
