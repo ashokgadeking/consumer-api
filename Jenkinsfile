@@ -29,6 +29,5 @@ pipeline {
         sh 'npm run can-i-deploy'
       }
     }
-
   }
 }
