@@ -24,10 +24,11 @@ pipeline {
       }
     }
     
-    stage('Publish Pact') {
+    stage('Pact Broker') {
       steps {
         sh './pact-broker --help'
       }
     }
+    
   }
 }
