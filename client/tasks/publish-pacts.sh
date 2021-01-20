@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
+
+curl -O https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+
+mv jq-linux64 jq && chmod +x jq
+
 for f in pacts/*.json; do
-  consumer=$(jq '.consumer.name' $f | sed s'/"//g')
-  provider=$(jq '.provider.name' $f | sed s'/"//g')
-  consumer_version=$(jq '.version' package.json | sed s'/"//g')
+  consumer=$(./jq '.consumer.name' $f | sed s'/"//g')
+  provider=$(./jq '.provider.name' $f | sed s'/"//g')
+  consumer_version=$(./jq '.version' package.json | sed s'/"//g')
   curl -X PUT \-H "Content-Type: application/json" \
     -d @$f \
     http://pact-broker:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version
