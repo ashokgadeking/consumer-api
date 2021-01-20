@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-curl -O https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-
-mv jq-linux64 jq && chmod +x jq
-
 for f in pacts/*.json; do
   consumer=$(./jq '.consumer.name' $f | sed s'/"//g')
   provider=$(./jq '.provider.name' $f | sed s'/"//g')
