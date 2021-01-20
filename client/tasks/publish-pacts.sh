@@ -5,5 +5,5 @@ for f in pacts/*.json; do
   consumer_version=$(jq '.version' package.json | sed s'/"//g')
   curl -X PUT \-H "Content-Type: application/json" \
     -d @$f \
-    http://localhost:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version
+    http://pact-broker:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version
 done
