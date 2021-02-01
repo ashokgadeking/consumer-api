@@ -8,5 +8,8 @@ for f in pacts/*.json; do
   consumer_version="1.0.0_${GIT_COMMIT}"
   curl -X PUT \-H "Content-Type: application/json" \
     -d @$f \
-    http://pact-broker:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version/tags/$BRANCH_NAME
+    http://pact-broker:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version
+  curl -X PUT \-H "Content-Type: application/json" \
+    -d @$f \
+    http://pact-broker:9292/participants/$consumer/versions/$consumer_version/tags/${BRANCH_NAME}
 done
