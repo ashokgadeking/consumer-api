@@ -1,5 +1,5 @@
-I, [2021-01-19T16:20:59.725990 #3005]  INFO -- : Registered expected interaction GET /products
-D, [2021-01-19T16:20:59.726276 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.020612 #3192]  INFO -- : Registered expected interaction GET /products
+D, [2021-01-22T13:20:55.020866 #3192] DEBUG -- : {
   "description": "a request to retrieve product list",
   "providerState": "it has one product",
   "request": {
@@ -17,8 +17,8 @@ D, [2021-01-19T16:20:59.726276 #3005] DEBUG -- : {
     ]
   }
 }
-I, [2021-01-19T16:20:59.740459 #3005]  INFO -- : Received request GET /products
-D, [2021-01-19T16:20:59.740582 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.032315 #3192]  INFO -- : Received request GET /products
+D, [2021-01-22T13:20:55.032441 #3192] DEBUG -- : {
   "path": "/products",
   "query": "",
   "method": "get",
@@ -28,8 +28,8 @@ D, [2021-01-19T16:20:59.740582 #3005] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-01-19T16:20:59.740783 #3005]  INFO -- : Found matching response for GET /products
-D, [2021-01-19T16:20:59.740869 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.032574 #3192]  INFO -- : Found matching response for GET /products
+D, [2021-01-22T13:20:55.032630 #3192] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -39,10 +39,10 @@ D, [2021-01-19T16:20:59.740869 #3005] DEBUG -- : {
     }
   ]
 }
-I, [2021-01-19T16:20:59.748461 #3005]  INFO -- : Verifying - interactions matched for example ""
-I, [2021-01-19T16:20:59.753382 #3005]  INFO -- : Cleared interactions before example ""
-I, [2021-01-19T16:20:59.760280 #3005]  INFO -- : Registered expected interaction GET /products?min-price=2&max-price=5
-D, [2021-01-19T16:20:59.760431 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.038993 #3192]  INFO -- : Verifying - interactions matched for example ""
+I, [2021-01-22T13:20:55.042946 #3192]  INFO -- : Cleared interactions before example ""
+I, [2021-01-22T13:20:55.048239 #3192]  INFO -- : Registered expected interaction GET /products?min-price=2&max-price=5
+D, [2021-01-22T13:20:55.048363 #3192] DEBUG -- : {
   "description": "a request to retrieve product list filtered by price",
   "providerState": "it has multiple products with different prices",
   "request": {
@@ -72,8 +72,8 @@ D, [2021-01-19T16:20:59.760431 #3005] DEBUG -- : {
     }
   }
 }
-I, [2021-01-19T16:20:59.765334 #3005]  INFO -- : Received request GET /products?min-price=2&max-price=5
-D, [2021-01-19T16:20:59.765417 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.053943 #3192]  INFO -- : Received request GET /products?min-price=2&max-price=5
+D, [2021-01-22T13:20:55.054044 #3192] DEBUG -- : {
   "path": "/products",
   "query": "min-price=2&max-price=5",
   "method": "get",
@@ -84,8 +84,8 @@ D, [2021-01-19T16:20:59.765417 #3005] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-01-19T16:20:59.765631 #3005]  INFO -- : Found matching response for GET /products?min-price=2&max-price=5
-D, [2021-01-19T16:20:59.765699 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.054338 #3192]  INFO -- : Found matching response for GET /products?min-price=2&max-price=5
+D, [2021-01-22T13:20:55.054413 #3192] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -99,10 +99,10 @@ D, [2021-01-19T16:20:59.765699 #3005] DEBUG -- : {
     "min": 1
   }
 }
-I, [2021-01-19T16:20:59.769338 #3005]  INFO -- : Verifying - interactions matched for example ""
-I, [2021-01-19T16:20:59.772189 #3005]  INFO -- : Cleared interactions before example ""
-I, [2021-01-19T16:20:59.776842 #3005]  INFO -- : Registered expected interaction POST /products
-D, [2021-01-19T16:20:59.776961 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.058545 #3192]  INFO -- : Verifying - interactions matched for example ""
+I, [2021-01-22T13:20:55.062579 #3192]  INFO -- : Cleared interactions before example ""
+I, [2021-01-22T13:20:55.069895 #3192]  INFO -- : Registered expected interaction POST /products
+D, [2021-01-22T13:20:55.070123 #3192] DEBUG -- : {
   "description": "a request to create a new product",
   "providerState": "it has one product",
   "request": {
@@ -134,8 +134,8 @@ D, [2021-01-19T16:20:59.776961 #3005] DEBUG -- : {
     }
   }
 }
-I, [2021-01-19T16:20:59.781814 #3005]  INFO -- : Received request POST /products
-D, [2021-01-19T16:20:59.781913 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.075298 #3192]  INFO -- : Received request POST /products
+D, [2021-01-22T13:20:55.075412 #3192] DEBUG -- : {
   "path": "/products",
   "query": "",
   "method": "post",
@@ -154,8 +154,8 @@ D, [2021-01-19T16:20:59.781913 #3005] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-01-19T16:20:59.782266 #3005]  INFO -- : Found matching response for POST /products
-D, [2021-01-19T16:20:59.782339 #3005] DEBUG -- : {
+I, [2021-01-22T13:20:55.075749 #3192]  INFO -- : Found matching response for POST /products
+D, [2021-01-22T13:20:55.075857 #3192] DEBUG -- : {
   "status": 201,
   "headers": {
   },
@@ -170,7 +170,7 @@ D, [2021-01-19T16:20:59.782339 #3005] DEBUG -- : {
     "stock": 3
   }
 }
-I, [2021-01-19T16:20:59.786270 #3005]  INFO -- : Verifying - interactions matched for example ""
-I, [2021-01-19T16:20:59.789672 #3005]  INFO -- : Cleared interactions before example ""
-I, [2021-01-19T16:20:59.794128 #3005]  INFO -- : Writing pact with details {:pactfile_write_mode=>"overwrite", :consumer=>{:name=>"Client"}, :provider=>{:name=>"ProductService"}}
-I, [2021-01-19T16:20:59.794321 #3005]  INFO -- : Writing pact for ProductService to /Users/ashoktejagadepalli/Pact/consumer-api/pacts/client-productservice.json
+I, [2021-01-22T13:20:55.078952 #3192]  INFO -- : Verifying - interactions matched for example ""
+I, [2021-01-22T13:20:55.081738 #3192]  INFO -- : Cleared interactions before example ""
+I, [2021-01-22T13:20:55.085529 #3192]  INFO -- : Writing pact with details {:pactfile_write_mode=>"overwrite", :consumer=>{:name=>"Client"}, :provider=>{:name=>"ProductService"}}
+I, [2021-01-22T13:20:55.085641 #3192]  INFO -- : Writing pact for ProductService to /Users/ashoktejagadepalli/Pact/consumer-api/pacts/client-productservice.json

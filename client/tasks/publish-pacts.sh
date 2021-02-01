@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+printenv
+
 for f in pacts/*.json; do
   consumer="Client"
   provider="ProductService"
