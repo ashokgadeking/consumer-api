@@ -9,7 +9,5 @@ for f in pacts/*.json; do
   curl -X PUT \-H "Content-Type: application/json" \
     -d @$f \
     http://pact-broker:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version
-  curl -X PUT \-H "Content-Type: application/json" \
-    -d @$f \
-    http://pact-broker:9292/participants/$consumer/versions/$consumer_version/tags/${BRANCH_NAME}
+  curl -X PUT http://pact-broker:9292/participants/$consumer/versions/$consumer_version/tags/${BRANCH_NAME}
 done
