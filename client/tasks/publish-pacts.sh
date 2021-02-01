@@ -10,5 +10,6 @@ for f in pacts/*.json; do
     -d @$f \
     http://pact-broker:9292/pacts/provider/$provider/consumer/$consumer/version/$consumer_version
 
-  curl -X PUT http://pact-broker:9292/pacticipants/Client/versions/$consumer_version/tags/prod
+  curl -H "Content-Type: application/json" -X PUT \
+  	http://pact-broker:9292/pacticipants/$consumer/versions/$consumer_version/tags/${BRANCH_NAME}
 done
