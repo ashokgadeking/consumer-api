@@ -40,19 +40,19 @@ describe('product handling', () => {
     })
   })
 
-  // describe('#getProducts', () => {
-  //   it('should return product list based on query', async function () {
-  //     await provider.addInteraction(interactions.getFilteredProductList)
-  //     const productList = await client.getProducts({
-  //       'min-price': '2',
-  //       'max-price': '5',
-  //     })
+  describe('#getProducts', () => {
+    it('should return product list based on query', async function () {
+      await provider.addInteraction(interactions.getFilteredProductList)
+      const productList = await client.getProducts({
+        'min-price': '2',
+        'max-price': '5',
+      })
 
-  //     expect(productList).to.eql([ { name: 'Foo', img: 'http://foo-url.com', price: 2 } ])
+      expect(productList).to.eql([ { name: 'Foo', img: 'http://foo-url.com', price: 2 } ])
 
-  //     await provider.verify()
-  //   })
-  // })
+      await provider.verify()
+    })
+  })
 
   describe('#registerProduct', () => {
     it('should send product registration request', async function () {
