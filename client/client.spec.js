@@ -54,22 +54,22 @@ describe('product handling', () => {
     })
   })
 
-  describe('#registerProduct', () => {
-    it('should send product registration request', async function () {
-      await provider.addInteraction(interactions.registerProduct)
+  // describe('#registerProduct', () => {
+  //   it('should send product registration request', async function () {
+  //     await provider.addInteraction(interactions.registerProduct)
 
-      const product = {
-        name: 'Bar',
-        img: 'https://webshop.com/img/cheap-shoe.png',
-        price: 2,
-        stock: 3
-      }
+  //     const product = {
+  //       name: 'Bar',
+  //       img: 'https://webshop.com/img/cheap-shoe.png',
+  //       price: 2,
+  //       stock: 3
+  //     }
 
-      const response = await client.registerProduct(product)
+  //     const response = await client.registerProduct(product)
 
-      expect(response).to.be.eql(Object.assign(product, { id: 1 }))
+  //     expect(response).to.be.eql(Object.assign(product, { id: 1 }))
 
-      await provider.verify()
-    })
-  })
+  //     await provider.verify()
+  //   })
+  // })
 })
